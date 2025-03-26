@@ -1,6 +1,7 @@
 # Strelka2 VCF Annotator
 
 A command-line Python tool to annotate somatic (tumor/normal) SNV and indel VCFs produced by Strelka2 with additional metrics like ADs, VAFs, and Fisher test statistics.
+It supports merged VCFs, and VEP-annotated outputs.
 
 
 ## ✨ Features
@@ -44,6 +45,16 @@ which bcftools
 
 
 ## 🚀 Usage
+
+### 🔄 Clone the repository
+
+First, clone this repository and enter the directory:
+```bash
+git clone https://github.com/blazoder/strelka2-vcf-annotator.git
+cd strelka2-vcf-annotator
+```
+
+Then run the script as shown below:
 
 ### Simple:
 ```bash
