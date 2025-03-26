@@ -46,6 +46,16 @@ which bcftools
 
 ## 🚀 Usage
 
+### 🛠️ Command-line options
+
+| Option            | Description                                                       |
+|-------------------|-------------------------------------------------------------------|
+| `--input`         | One or more input VCFs (SNVs and/or indels) (.vcf or .vcf.gz)     |
+| `--output`        | Output annotated VCF (.vcf or .vcf.gz)                            |
+| `--only-pass`     | Filter to PASS variants only using `bcftools view -f PASS`        |
+| `--index-output`  | Index the final output VCF using `bcftools index`                 |
+
+
 ### 🔄 Clone the repository
 
 First, clone this repository and enter the directory:
@@ -90,20 +100,30 @@ python annotate_strelka2.py \
 
 ## 🧬 Fields added
 
-### INFO fields added:
-- `TUMREF`, `TUMALT`, `NORMREF`, `NORMALT`
-- `TUMVAF`: ALT / (REF + ALT)
-- `TUMVAF_TOTAL`: ALT / total depth (all bases)
-- `TUMVARFRACTION`: ALT in tumor / total ALT (in tumor + normal)
-- `LOG_FISHER`: Fisher's test on REF vs ALT
-- `LOG_FISHER_TOTAL`: Fisher's test on ALT vs all bases
+### INFO fields
 
-### FORMAT fields added:
-- `AD`: REF and ALT counts (comma-separated)
-- `DPVAF`: REF + ALT
-- `DPVAF_TOTAL`: Total depth (all bases)
-- `VAF`: ALT / (REF + ALT)
-- `VAF_TOTAL`: ALT / total depth (all bases)
+| Field            | Description                                          |
+|------------------|------------------------------------------------------|
+| `TUMREF`         | Tumor REF read count                                 |
+| `TUMALT`         | Tumor ALT read count                                 |
+| `NORMREF`        | Normal REF read count                                |
+| `NORMALT`        | Normal ALT read count                                |
+| `TUMVAF`         | ALT / (REF + ALT)                                    |
+| `TUMVAF_TOTAL`   | ALT / total depth (all bases)                        |
+| `TUMVARFRACTION` | ALT in tumor / total ALT (in tumor + normal)         |
+| `LOG_FISHER`     | Fisher's test on REF vs ALT                          |
+| `LOG_FISHER_TOTAL`| Fisher's test on ALT vs all bases                   |
+
+### FORMAT fields
+
+| Field         | Description                                 |
+|---------------|---------------------------------------------|
+| `AD`          | REF and ALT counts (comma-separated)        |
+| `DPVAF`       | REF + ALT                                   |
+| `DPVAF_TOTAL` | Total depth (all bases)                     |
+| `VAF`         | ALT / (REF + ALT)                           |
+| `VAF_TOTAL`   | ALT / total depth (all bases)               |
+
 
 > Tier1 counts only are considered. Read more about Strelka2 [here](https://github.com/Illumina/strelka/blob/v2.9.x/docs/userGuide/README.md#vcf-files).
 
