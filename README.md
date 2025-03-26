@@ -46,16 +46,6 @@ which bcftools
 
 ## 🚀 Usage
 
-### 🛠️ Command-line options
-
-| Option            | Description                                                       |
-|-------------------|-------------------------------------------------------------------|
-| `--input`         | One or more input VCFs (SNVs and/or indels) (.vcf or .vcf.gz)     |
-| `--output`        | Output annotated VCF (.vcf or .vcf.gz)                            |
-| `--only-pass`     | Filter to PASS variants only using `bcftools view -f PASS`        |
-| `--index-output`  | Index the final output VCF using `bcftools index`                 |
-
-
 ### 🔄 Clone the repository
 
 First, clone this repository and enter the directory:
@@ -65,6 +55,15 @@ cd strelka2-vcf-annotator
 ```
 
 Then run the script as shown below:
+
+### 🛠️ Command-line options
+
+| Option            | Description                                                       |
+|-------------------|-------------------------------------------------------------------|
+| `--input`         | One or more input VCFs (SNVs and/or indels) (.vcf or .vcf.gz)     |
+| `--output`        | Output annotated VCF (.vcf or .vcf.gz)                            |
+| `--only-pass`     | Filter to PASS variants only using `bcftools view -f PASS`        |
+| `--index-output`  | Index the final output VCF using `bcftools index`                 |
 
 ### Simple:
 ```bash
