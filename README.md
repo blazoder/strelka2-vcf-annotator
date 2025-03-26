@@ -134,7 +134,7 @@ These fields use the total tier1 depth from all observed bases, not just the REF
 
 
 ## 🗂 Output
-The final output is a compressed VCF (`.vcf.gz`) with all annotations added. If `--index-output` is used, it also generates a `.tbi` index file.
+The final output is a (compressed) VCF with all annotations added. If `--index-output` is used, it also generates a `.tbi` index file.
 
 
 ## 📝 License
