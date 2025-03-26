@@ -109,10 +109,7 @@ python annotate_strelka2.py \
 
 `TUMVAF` and `LOG_FISHER` from INFO, and `DPVAF`, `VAF` from FORMAT are calculated using only the REF and ALT alleles, in line with Strelka2's recommended approach.
 
-However, sequencing reads may also support other nucleotides or alleles at the same position. To provide a more comprehensive view of allelic representation, we additionally compute:
-
-- `TUMVAF_TOTAL` and `LOG_FISHER_TOTAL` (in INFO)
-- `VAF_TOTAL` and `DPVAF_TOTAL` (in FORMAT)
+However, sequencing reads may also support other nucleotides or alleles at the same position. To provide a more comprehensive view of allelic representation, we additionally compute `TUMVAF_TOTAL`, `LOG_FISHER_TOTAL`, `VAF_TOTAL`, and `DPVAF_TOTAL`.
 
 These fields use the total tier1 depth from all observed bases, not just the REF and ALT alleles. This helps better reflect situations with mixed or noisy signal beyond the canonical REF/ALT model.
 
