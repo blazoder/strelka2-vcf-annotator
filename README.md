@@ -1,8 +1,7 @@
-# Strelka2 VCF Annotator 🧬
+# Strelka2 VCF Annotator
 
 A command-line Python tool to annotate somatic (tumor/normal) SNV and indel VCFs produced by Strelka2 with additional metrics like ADs, VAFs, and Fisher test statistics.
 
----
 
 ## ✨ Features
 
@@ -13,7 +12,6 @@ A command-line Python tool to annotate somatic (tumor/normal) SNV and indel VCFs
 - Computes Fisher exact test statistics
 - Optionally indexes the output with `bcftools`
 
----
 
 ## 🔧 Installation and dependencies
 
@@ -44,7 +42,6 @@ Ensure `bcftools` is in your `$PATH`:
 which bcftools
 ```
 
----
 
 ## 🚀 Usage
 
@@ -79,7 +76,6 @@ python annotate_strelka2.py \
   --index-output
 ```
 
----
 
 ## 🧬 Fields added
 
@@ -109,12 +105,10 @@ However, sequencing reads may also support other nucleotides or alleles at the s
 
 These fields use the total tier1 depth from all observed bases, not just the REF and ALT alleles. This helps better reflect situations with mixed or noisy signal beyond the canonical REF/ALT model.
 
----
 
 ## 🗂 Output
 The final output is a compressed VCF (`.vcf.gz`) with all annotations added. If `--index-output` is used, it also generates a `.tbi` index file.
 
----
 
 ## 📝 License
 This tool is released under the [MIT License](LICENSE). You are free to use, modify, and distribute it with proper attribution.
