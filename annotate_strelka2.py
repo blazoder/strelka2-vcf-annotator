@@ -36,7 +36,8 @@ def parse_counts(format_keys, sample_values, ref_base=None, alt_base=None, varia
     else:
         ref_counts = data.get("TAR", "0,0").split(",")
         alt_counts = data.get("TIR", "0,0").split(",")
-        total_tier1 = int(ref_counts[0]) + int(alt_counts[0])
+        other_counts = data.get("TOR", "0,0").split(",")
+        total_tier1 = int(ref_counts[0]) + int(alt_counts[0]) + int(other_counts[0])
 
     return int(ref_counts[0]), int(alt_counts[0]), total_tier1
 
